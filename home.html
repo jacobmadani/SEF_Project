@@ -3,20 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>QuizGenie - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Quiz App</h1>
-        <button id="logoutBtn">Logout</button>
-    </header>  
-    <main>
-        <div id="welcomeMessage"></div>
-        <h2>Available Quizzes</h2>
-        <div id="quizList" class="quiz-list"></div>
-    </main>
-    <script src="home.js"></script>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>QuizGenie</h1>
+            <div class="user-menu">
+                <span class="welcome-msg">Welcome back, <strong>Alex</strong></span>
+                <button class="btn-logout">Logout</button>
+            </div>
+        </div>
+    </header>
 
+    <main class="dashboard">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Test Your Knowledge</h2>
+                <p>Select a quiz below to begin your learning journey</p>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search quizzes...">
+                <button class="btn-search">Search</button>
+            </div>
+        </section>
+
+        <section class="quiz-categories">
+            <h3>Popular Categories</h3>
+            <div class="category-tags">
+                <span class="tag">Science</span>
+                <span class="tag active">All</span>
+                <span class="tag">History</span>
+                <span class="tag">Math</span>
+                <span class="tag">Languages</span>
+            </div>
+        </section>
+
+        <section class="quiz-grid">
+            <div class="quiz-card">
+                <div class="quiz-badge">New</div>
+                <div class="quiz-image" style="background-color: #6A35FF;">
+                    <img src="science-icon.svg" alt="Science">
+                </div>
+                <div class="quiz-info">
+                    <h4>General Science</h4>
+                    <p>Test your knowledge of basic scientific concepts</p>
+                    <div class="quiz-meta">
+                        <span>10 Questions</span>
+                        <span>•</span>
+                        <span>Medium</span>
+                    </div>
+                </div>
+                <button class="btn-start">Start Quiz</button>
+            </div>
+
+            <div class="quiz-card featured">
+                <div class="quiz-badge">Featured</div>
+                <div class="quiz-image" style="background-color: #4D8AFF;">
+                    <img src="world-icon.svg" alt="World">
+                </div>
+                <div class="quiz-info">
+                    <h4>World Capitals</h4>
+                    <p>How well do you know global geography?</p>
+                    <div class="quiz-meta">
+                        <span>15 Questions</span>
+                        <span>•</span>
+                        <span>Easy</span>
+                    </div>
+                </div>
+                <button class="btn-start">Start Quiz</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="home.js"></script>
 </body>
 </html>

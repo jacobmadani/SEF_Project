@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take Quiz</title>
+    <title>QuizGenie - Science Quiz</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 id="quizTitle">Quiz</h1>
-        <button id="backBtn">Back to Home</button>
+    <header class="quiz-header">
+        <div class="quiz-progress">
+            <div class="progress-bar" style="width: 33%"></div>
+        </div>
+        <div class="header-content">
+            <button class="btn-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h2>General Science</h2>
+            <div class="quiz-stats">
+                <span>Question 1 of 10</span>
+            </div>
+        </div>
     </header>
-    <main>
-        <form id="quizForm">
-            <div id="questionsContainer"></div>
-            <button type="submit">Submit Quiz</button>
-        </form>
-        <div id="resultContainer" class="hidden">
-            <h2>Your Score: <span id="score"></span></h2>
-            <p id="resultMessage"></p>
+
+    <main class="quiz-container">
+        <div class="question-card">
+            <div class="question-header">
+                <span class="question-number">Question 1</span>
+                <span class="difficulty">Medium</span>
+            </div>
+            
+            <div class="question-content">
+                <h3>What is the chemical symbol for gold?</h3>
+                
+                <div class="options-grid">
+                    <div class="option-card">
+                        <input type="radio" id="option1" name="question" value="Au">
+                        <label for="option1">Au</label>
+                    </div>
+                    <div class="option-card">
+                        <input type="radio" id="option2" name="question" value="Ag">
+                        <label for="option2">Ag</label>
+                    </div>
+                    <div class="option-card">
+                        <input type="radio" id="option3" name="question" value="Fe">
+                        <label for="option3">Fe</label>
+                    </div>
+                    <div class="option-card">
+                        <input type="radio" id="option4" name="question" value="Pb">
+                        <label for="option4">Pb</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-navigation">
+            <button class="btn-skip">Skip Question</button>
+            <button class="btn-next">Next Question</button>
         </div>
     </main>
+
     <script src="quiz.js"></script>
 </body>
 </html>
